@@ -37,7 +37,7 @@ export default function MaterialUIPickers() {
     return (
         <ThemeProvider theme={materialTheme}>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                <Grid container style={{top: '50%', position: 'relative', transform: 'translateY(-50%)'}}>
+                <Grid container style={{ top: '50%', position: 'relative', transform: 'translateY(-50%)' }}>
                     <Grid item xs={12}>
                     <KeyboardTimePicker
                         margin="normal"
