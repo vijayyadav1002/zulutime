@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Zulu time</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link rel="shortcut icon" href="../src/images/favicon.ico" />
-    <link rel="apple-touch-icon" size="180x180" href="../src/images/apple-touch-icon.png" />
     <meta name="theme-color" content="#000000" />
     <script type="application/javascript">
-        var manifestFile = '/manifest.json';
-        var linkTag = document.createElement('link');
-        linkTag.setAttribute('rel', 'manifest');
-        linkTag.setAttribute('href', manifestFile);
-        document.querySelector('head').appendChild(linkTag);
+        function createLinkTags(filePath, rel) {
+            var linkTag = document.createElement('link');
+            linkTag.setAttribute('rel', rel);
+            linkTag.setAttribute('href', filePath);
+            document.querySelector('head').appendChild(linkTag);
+        }
+        createLinkTags('/manifest.json', 'manifest');
+        createLinkTags('/favicon.ico', 'shortcut icon');
+        createLinkTags('/apple-touch-icon.png', 'apple-touch-icon');
     </script>
 </head>
 <body>

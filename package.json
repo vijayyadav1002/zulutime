@@ -57,7 +57,7 @@
     "since 2017-06"
   ],
   "staticFiles": {
-    "staticPath": "src/public",
+    "staticPath": ["src/public", "src/images"],
     "watcherGlob": "**"
   }
 }
