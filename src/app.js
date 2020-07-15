@@ -4,6 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import yellow from '@material-ui/core/colors/yellow';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import './app.scss';
 
 // Hook
@@ -35,11 +36,25 @@ function useWindowSize() {
     return windowSize;
 }
 
+const theme = createMuiTheme({
+    overrides: {
+        MuiCssBaseline: {
+            '@global': {
+                body: {
+                    backgroundColor: yellow.A400,
+                },
+            },
+        },
+    },
+});
+
 const App = () => {
     const size = useWindowSize();
     return (
         <React.Fragment>
-            <CssBaseline/>
+            <ThemeProvider theme={theme}>
+                <CssBaseline/>
+            </ThemeProvider>
             <Container maxWidth="sm" disableGutters>
                 <Typography component="div" style={{ backgroundColor: yellow.A400, height: size.height }}>
                     <ClockTimePicker/>
