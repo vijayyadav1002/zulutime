@@ -1,4 +1,4 @@
-var CACHE_NAME = 'zulutime.v1';
+var CACHE_NAME = 'zulutime.v2';
 var urlsToCache = [
     '/'
 ];
